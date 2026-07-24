@@ -28,4 +28,8 @@ func main(){
 		fmt.Println("Error while parsing the string slice: ",err)
 	}
 
+	Sum := Sum(intSlice)
+
+	fmt.Println("Sum is: ",Sum)
+
 }
