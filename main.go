@@ -29,8 +29,16 @@ func main(){
 	}
 
 	Sum := Sum(intSlice)
-	Average := Average(intSlice)
-	Max := Max(intSlice)
+	Average,errors := Average(intSlice)
+	Max,MaxError := Max(intSlice)
+
+	if errors != nil {
+		fmt.Println("Error while calculating Average: ",errors)
+	}
+
+	if MaxError != nil {
+		fmt.Println("Error while calculating Max: ",MaxError)
+	}
 
 	fmt.Println("Sum is: ",Sum)
 	fmt.Println("Average is: ",Average)

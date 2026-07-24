@@ -1,5 +1,11 @@
 package main
 
+import (
+	"fmt"
+
+	"errors"
+)
+
 func Sum(numbers []int) int {
 		sum := 0
 		for _,num := range numbers{
@@ -14,9 +20,9 @@ func Average(numbers []int) (int,error){
 		TotalSum := Sum(numbers)
 
 		if TotalSum <= 0 {
-			err = "Total Sum is zero or less than zero"
+			var err = errors.New("Total Sum is zero or less than zero")
 			fmt.Printf("Error: ",err)
-			return nil,err
+			return 0,err
 		}
 
 		Average := TotalSum/length
