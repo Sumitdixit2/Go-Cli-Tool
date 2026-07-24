@@ -9,15 +9,30 @@ func Sum(numbers []int) int {
 		return sum
 }
 
-func Average(numbers []int) (int,err){
+func Average(numbers []int) (int,error){
 		length := len(numbers)
 		TotalSum := Sum(numbers)
 
 		if TotalSum <= 0 {
-			fmt.Printf("Error: Total Sum is zero or less than zero")
+			err = "Total Sum is zero or less than zero"
+			fmt.Printf("Error: ",err)
+			return nil,err
 		}
 
 		Average := TotalSum/length
 
-		return Average
+		return Average,nil
 }
+
+func Max(numbers []int) (int, error) {
+
+		max := numbers[0]
+				
+		for i := 1; i < len(numbers); i++{
+			if max < numbers[i]{
+				max = numbers[i]
+			}
+		}
+
+		return max,nil
+} 

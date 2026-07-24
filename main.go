@@ -30,7 +30,9 @@ func main(){
 
 	Sum := Sum(intSlice)
 	Average := Average(intSlice)
+	Max := Max(intSlice)
 
 	fmt.Println("Sum is: ",Sum)
-
+	fmt.Println("Average is: ",Average)
+	fmt.Println("Max is: ",Max)
 }
