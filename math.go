@@ -8,3 +8,16 @@ func Sum(numbers []int) int {
 
 		return sum
 }
+
+func Average(numbers []int) (int,err){
+		length := len(numbers)
+		TotalSum := Sum(numbers)
+
+		if TotalSum <= 0 {
+			fmt.Printf("Error: Total Sum is zero or less than zero")
+		}
+
+		Average := TotalSum/length
+
+		return Average
+}

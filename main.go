@@ -29,6 +29,7 @@ func main(){
 	}
 
 	Sum := Sum(intSlice)
+	Average := Average(intSlice)
 
 	fmt.Println("Sum is: ",Sum)
 
