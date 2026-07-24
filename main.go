@@ -14,7 +14,6 @@ func main(){
 		return
 	}
 
-
 	numbers := make([]string,num)
 
 	for i := 0 ; i < num;i++{
@@ -23,5 +22,10 @@ func main(){
 		fmt.Scanln(&numbers[i])
 	}
 
-	fmt.Println("numbers slice is: ",numbers)
+	intSlice,err := parse(numbers)
+
+	if intSlice == nil || err != nil {
+		fmt.Println("Error while parsing the string slice: ",err)
+	}
+
 }
